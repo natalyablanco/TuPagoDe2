@@ -1,0 +1,10 @@
+I WANT TO SEE A BOOK THAT I WANT TO BUY
+
+I am on page "/"
+I see "Juego de tronos"
+I see "Comprar"
+I click "Comprar"
+I am on page "/"
+I see "Juego de tronos"
+I see "Comprar"
+I click "Comprar"

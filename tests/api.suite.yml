@@ -1,0 +1,11 @@
+class_name: ApiGuy
+modules:
+    enabled: [Yii1, PhpBrowser, SOAP, ApiHelper]
+    config:
+      PhpBrowser:
+          url: http://localhost/TuPagoDe2/
+      SOAP:
+          endpoint: https://esitef-homologacao.softwareexpress.com.br/e-sitef/Payment2?wsdl
+      Yii1:
+            appPath: 'C:/wamp/www/TupagoDe2/index.php'
+            url: 'http://localhost/TupagoDe2/index.php'

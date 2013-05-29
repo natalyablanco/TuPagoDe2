@@ -17,20 +17,39 @@ $this->pageTitle=Yii::app()->name;
 <br>
 <br>
 
-<p>Datos de Compra</p>
-<form method="post" action="/validate" id="payment_form">
+<h1>Datos de Compra</h1>
+<form method="post" action="index.php?r=site/validate" id="payment_form">
+     <label for="amount">Amount</label>
+     <input type="text" name="form[amount]" id="amount" value="500" disabled/><br>
+
+     <label for="merchant_usn">Merchant USN</label>
+     <input type="text" name="form[merchant_usn]" id="merchant_usn" value="19949576" disabled/><br>
+     
+     <label for="merchant_id">Merchant Id</label>
+     <input type="text" name="form[merchant_id]" id="merchant_id" value="TESTSTORE" disabled/><br>
+     
+     <label for="order_id">Order Id</label>
+     <input type="text" name="form[order_id]" id="order_id" value="19949576" disabled/><br>
+     
      <label for="card_number">Card Number</label>
-     <input type="text" name="card[number]" id="card_number" /><br>
+     <input type="text" name="form[card_number]" id="card_number"  maxlength="19"/><br>
+     
      <label for="card_expiry">Expiry Date</label>
-     <input type="text" name="card[expiry]" id="card_expiry" /><br>
+     <input type="text" name="form[card_expiry]" id="card_expiry" maxlength="4"/><br>
+     
      <label for="card_security">Security Code</label>
-     <input type="text" name="card[security]" id="card_security" /><br>
+     <input type="text" name="form[card_security]" id="card_security"  maxlength="5"/><br>
+     
      <label for="card_id">Id User</label>
-     <input type="text" name="card[id]" id="card_id" /><br>
-     <label for="user_gender">Tipo</label>
-     <select id="user_gender" name="user[gender]">
-          <option value="v">Visa</option>
-          <option value="m">Master</option>
+     <input type="text" name="form[user_id]" id="card_id" maxlength="8"/><br>
+     
+     <label for="card_type">Tipo</label>
+     <select id="card_type" name="form[card_type]">
+          <option value="visa">Visa</option>
+          <option value="mastercard">Master Card</option>
+          <option value="amex">American Express</option>
+          <option value="diners">Diners</option>
+          <option value="hipercard">Hipercard</option>
      </select>     
      <br>
      <input type="submit" value="Validar" />

@@ -26,7 +26,7 @@ switch (@$_SERVER["APPLICATION_ENV"]){
 	case "prod":
         // remove the following lines when in production mode
         defined('YII_DEBUG') or define('YII_DEBUG',false);
-        // specify how many levels of call stack should be shown in each log message
+      //  // specify how many levels of call stack should be shown in each log message
         defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',0);
         $config=dirname(__FILE__).'/protected/config/mode_production.php';
         break;
@@ -35,7 +35,8 @@ switch (@$_SERVER["APPLICATION_ENV"]){
 
 require_once($yii);
 
-Yii::createWebApplication($config)->run();
+//Descomentar para pruebas de aceptación
+//Yii::createWebApplication($config)->run();
 
 return array(
    'class' => 'CWebApplication',

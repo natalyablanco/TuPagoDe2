@@ -5,4 +5,15 @@
 
 class_name: CodeGuy
 modules:
-    enabled: [CodeHelper]
+    enabled: [Yii1, Unit, Db, CodeHelper]
+    config:
+        Yii1:
+            appPath: 'C:/wamp/www/TupagoDe2/index.php'
+            url: 'http://localhost/TupagoDe2/index.php'
+        Db:
+            dsn: 'mysql:host=localhost;dbname=db_dev'
+            user: 'root'
+            password: 'tupagode'
+            dump: 'tests/_data/dump.sql'
+            populate: true
+            cleanup: false

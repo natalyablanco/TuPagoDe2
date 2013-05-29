@@ -1,0 +1,18 @@
+I WANT TO SEE A BOOK OF GOT AND CLICK "COMPRAR" TO SEE A ORDER FORM 
+
+I am on page "/"
+I see "Juego de Tronos - George R. R. Martin","p"
+I see element ".image"
+I see link "Comprar"
+I click "Comprar"
+I am on page "/site/compra"
+I see "Juego de Tronos - George R. R. Martin","p"
+I see "Cancion de Hielo y Fuego 1"
+I am on page "/"
+I see "Juego de Tronos - George R. R. Martin","p"
+I see element ".image"
+I see link "Comprar"
+I click "Comprar"
+I am on page "/site/compra"
+I see "Juego de Tronos - George R. R. Martin","p"
+I see "Cancion de Hielo y Fuego 1"
