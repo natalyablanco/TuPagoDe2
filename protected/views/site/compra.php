@@ -2,7 +2,11 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-echo Yii::app()->user->id;
+
+     foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+     }
+
 ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
 </script>

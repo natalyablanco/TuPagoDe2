@@ -1,12 +1,10 @@
 <?php
 $I = new TestGuy($scenario);
-$I->wantTo('see a book of got and click "comprar"');
-$I->amOnPage('index?r=site/inicio');
-$I->see('Juego de Tronos - George R. R. Martin');
+$I->wantTo('Ver pagina de inicio con producto y boton de comprar');
+$I->amOnPage('index.php?r=site/inicio');
+$I->see('Juego de Tronos - George R. R. Martin','p');
 $I->seeElement('.image');
-$I->seeLink('Compra');
-$I->click('Compra');
-$I->amOnPage('/site/compra');
-$I->see('Juego de Tronos - George R. R. Martin');
+$I->click('Comprar');
+$I->amOnPage('index.php?r=site/compra');
 ?>
 

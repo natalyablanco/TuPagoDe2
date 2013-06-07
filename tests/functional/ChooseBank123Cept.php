@@ -1,9 +1,6 @@
 <?php
 $I = new TestGuy($scenario);
 $I->wantTo('Escoger Banesco como el banco emisor de la tarjeta para comprar el libro de GOT');
-$I->amOnPage('index.php?r=site/login');
-$I->fillField('Username ', 'natalya@correo.com');
-$I->fillField('Password ','123456');
 $I->amOnPage('index.php?r=site/compra');
 $I->see('Juego de Tronos - George R. R. Martin');
 $I->see('Datos de Compra');

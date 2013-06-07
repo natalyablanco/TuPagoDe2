@@ -1,7 +1,6 @@
 <?php
 $I = new WebGuy($scenario);
 $I->wantTo('No poder realizar transaccion si hay campos vacios');
-
 $I->amOnPage('index.php?r=site/compra');
 $I->see('Juego de Tronos - George R. R. Martin');
 $I->see('Datos de Compra');

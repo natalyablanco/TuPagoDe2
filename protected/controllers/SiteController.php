@@ -3,40 +3,7 @@
 class SiteController extends Controller
 {
 	
-	public function filters()
-	{
-		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
-		);
-	}
-
-	/**
-	 * Specifies the access control rules.
-	 * This method is used by the 'accessControl' filter.
-	 * @return array access control rules
-	 */
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','login','logout','inicio'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','inicio','compra','validate'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
-
+	
 	/**
 	 * Declares class-based actions.
 	 */
@@ -62,20 +29,13 @@ class SiteController extends Controller
 	public function actionCompra()
 	{
 		$this->render('compra');
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		/*if(isset($_POST['validate'])){
-			$this->render('compra');
-		}
-		$this->render('compra',array('validate'=>""));*/
 	}
 
 	/**
 	 * pagina de compra
 	 */
 	public function actionInicio()
-	{
-		
+	{		
 		$this->render('inicio');
 	}
 
@@ -85,7 +45,7 @@ class SiteController extends Controller
 	public function actionValidate()
 	{
 		if(isset($_POST['form'])){
-			/*
+			
 			$card_type = $_POST['form']['card_type'];
 			$card_number = $_POST['form']['card_number'];
 			$card_expiry = $_POST['form']['card_expiry'];
@@ -96,7 +56,7 @@ class SiteController extends Controller
 
 			if($card_expiry == "" || $card_security == "" || $card_number == ""){
 				Yii::app()->user->setFlash('notice', "No puede dejar campos vacios");
-				$this->redirect('compra');		
+				$this->redirect('index.php?r=site/compra');		
 				Yii::app()->end();	
 			}
 
@@ -202,14 +162,14 @@ class SiteController extends Controller
 			}else{
 				//si falla alguna validacion de la tarjeta retorna a compra con mensaje de error
 				Yii::app()->user->setFlash('notice', $validate);
-				$this->redirect('compra');			
+				$this->redirect('index.php?r=site/compra');	
 				Yii::app()->end();	
 			}
 			
 			if($validate != ""){
 				//si falla alguna validacion de fecha retorna al formulario con mesaje de error
 				Yii::app()->user->setFlash('notice', $validate);
-				$this->redirect('compra');
+				$this->redirect('index.php?r=site/compra');	
 				Yii::app()->end();			
 			}else{
 				//REALIZAR CONEXION CON EL BANCO
@@ -240,11 +200,9 @@ class SiteController extends Controller
 			
 				$this->render('validate',array('card_info'=>$card_info,'validate'=>$validate));
 				//Yii::app()->end();		
-			}*/
+			}
 		}else{
-			//$this->redirect(Yii::app()->homeUrl);
-			//$this->redirect('site/compra');
-			$this->redirect(array('site/compra'));
+			$this->redirect('index.php?r=site/compra');	
 			Yii::app()->end();		
 		}
 	}
@@ -335,3 +293,4 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 }
+

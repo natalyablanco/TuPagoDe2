@@ -22,7 +22,9 @@
 
   <script src="/TupagoDe2/js/modernizr-2.0.6.min.js"></script>
 
-  <title>My Web Application</title>
+  <script type="text/javascript" src="/TupagoDe2/assets/77ee715b/jquery.min.js"></script>
+<script type="text/javascript" src="/TupagoDe2/assets/77ee715b/jquery.yiiactiveform.js"></script>
+<title>TuPago.de - Login</title>
 </head>
 
 <body>
@@ -30,79 +32,52 @@
 <div class="container" id="wrapper">
 
   <header id="header">
-    <div id="logo"><a href="/">My Web Application</a></div>
+    <div id="logo"><a href="/">TuPago.de</a></div>
 
     <nav id="mainmenu">
-            <ul id="yw0">
+            <ul id="yw14">
 <li class="first"><a href="/TupagoDe2/index.php?r=site/index">Home</a></li>
-<li><a href="/TupagoDe2/index.php?r=site/page&amp;view=about">About</a></li>
 <li><a href="/TupagoDe2/index.php?r=site/contact">Contact</a></li>
-<li class="last"><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
+<li class="active last"><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
 </ul>    </nav><!-- mainmenu -->
   </header><!-- header -->
 
   <div id="main-wrapper"><div id="main" role="main">
     <section id="content">
 	
-<h1>Bienvenido a <i>My Web Application</i></h1>
+<h1>Login</h1>
 
-<p>Juego de Tronos - George R. R. Martin</p>
+<p>Please fill out the following form with your login credentials:</p>
 
-<p></p>
-<ul>
-	<li><b><i>Cancion de Hielo y Fuego 1 </i></b></li>
-	
-</ul>
-<img src="themes/mattskitchen/img/got.jpg" alt="GOT" height="42" width="42" class="image"></img>
-<br>
-<br>
+<div class="form">
+<form id="login-form" action="/TupagoDe2/index.php?r=site/login" method="post">
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-<h1>Datos de Compra</h1>
-<form method="post" action="index.php?r=site/validate" id="payment_form">
-     <label for="amount">Amount</label>
-     <input type="text" name="form[amount]" id="amount" value="500" disabled/><br>
+	<div class="row">
+		<label for="LoginForm_username" class="required">Username <span class="required">*</span></label>		<input name="LoginForm[username]" id="LoginForm_username" type="text" />		<div class="errorMessage" id="LoginForm_username_em_" style="display:none"></div>	</div>
 
-     <label for="merchant_usn">Merchant USN</label>
-     <input type="text" name="form[merchant_usn]" id="merchant_usn" value="19949576" disabled/><br>
-     
-     <label for="merchant_id">Merchant Id</label>
-     <input type="text" name="form[merchant_id]" id="merchant_id" value="TESTSTORE" disabled/><br>
-     
-     <label for="order_id">Order Id</label>
-     <input type="text" name="form[order_id]" id="order_id" value="19949576" disabled/><br>
-     
-     <label for="card_number">Card Number</label>
-     <input type="text" name="form[card_number]" id="card_number"  maxlength="19"/><br>
-     
-     <label for="card_expiry">Expiry Date</label>
-     <input type="text" name="form[card_expiry]" id="card_expiry" maxlength="4"/><br>
-     
-     <label for="card_security">Security Code</label>
-     <input type="text" name="form[card_security]" id="card_security"  maxlength="5"/><br>
-     
-     <label for="card_id">Id User</label>
-     <input type="text" name="form[user_id]" id="card_id" maxlength="8"/><br>
-     
-     <label for="card_type">Tipo</label>
-     <select id="card_type" name="form[card_type]">
-          <option value="visa">Visa</option>
-          <option value="mastercard">Master Card</option>
-          <option value="amex">American Express</option>
-          <option value="diners">Diners</option>
-          <option value="hipercard">Hipercard</option>
-     </select>     
-     <br>
-     <input type="submit" value="Validar" />
-</form></section><!-- content -->
+	<div class="row">
+		<label for="LoginForm_password" class="required">Password <span class="required">*</span></label>		<input name="LoginForm[password]" id="LoginForm_password" type="password" />		<div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>		<p class="hint">
+			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
+		</p>
+	</div>
+
+	<div class="row rememberMe">
+		<input id="ytLoginForm_rememberMe" type="hidden" value="0" name="LoginForm[rememberMe]" /><input name="LoginForm[rememberMe]" id="LoginForm_rememberMe" value="1" type="checkbox" />		<label for="LoginForm_rememberMe">Remember me next time</label>		<div class="errorMessage" id="LoginForm_rememberMe_em_" style="display:none"></div>	</div>
+
+	<div class="row buttons">
+		<input type="submit" name="yt7" value="Login" />	</div>
+
+</form></div><!-- form -->
+</section><!-- content -->
   </div></div><!-- main -->
 
   <footer id="footer">
     <nav id="footermenu">
-      <ul id="yw1">
+      <ul id="yw15">
 <li><a href="/TupagoDe2/index.php?r=site/index">Home</a></li>
-<li><a href="/TupagoDe2/index.php?r=site/page&amp;view=about">About</a></li>
 <li><a href="/TupagoDe2/index.php?r=site/contact">Contact</a></li>
-<li><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
+<li class="active"><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
 </ul>    </nav>
     <div class="content">
       Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.    </div>
@@ -110,148 +85,30 @@
 
 </div><!-- wrapper -->
 
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('#login-form').yiiactiveform({'validateOnSubmit':true,'attributes':[{'id':'LoginForm_username','inputID':'LoginForm_username','errorID':'LoginForm_username_em_','model':'LoginForm','name':'username','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("Username cannot be blank.");
+}
+
+}},{'id':'LoginForm_password','inputID':'LoginForm_password','errorID':'LoginForm_password_em_','model':'LoginForm','name':'password','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("Password cannot be blank.");
+}
+
+}},{'id':'LoginForm_rememberMe','inputID':'LoginForm_rememberMe','errorID':'LoginForm_rememberMe_em_','model':'LoginForm','name':'rememberMe','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='' && value!="1" && value!="0") {
+	messages.push("Remember me next time must be either 1 or 0.");
+}
+
+}}]});
+});
+/*]]>*/
+</script>
 </body>
 </html>
-<!-- start log messages -->
-<table class="yiiLog" width="100%" cellpadding="2" style="border-spacing:1px;font:11px Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;color:#666666;">
-	<tr>
-		<th style="background:black;color:white;" colspan="5">
-			Application Log
-		</th>
-	</tr>
-	<tr style="background-color: #ccc;">
-	    <th style="width:120px">Timestamp</th>
-		<th>Level</th>
-		<th>Category</th>
-		<th>Message</th>
-	</tr>
-	<tr style="background:#FFFFFF">
-		<td align="center">18:54:39.878173</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;log&quot; application component
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Module/Yii1.php
-(112)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
-(53)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
-(44)</pre></td>
-	</tr>	<tr style="background:#F5F5F5">
-		<td align="center">18:54:39.880568</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;request&quot; application component
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Module/Yii1.php
-(112)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
-(53)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
-(44)</pre></td>
-	</tr>	<tr style="background:#FFFFFF">
-		<td align="center">18:54:39.919980</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;log&quot; application component
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
-(82)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
-(264)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
-(50)</pre></td>
-	</tr>	<tr style="background:#F5F5F5">
-		<td align="center">18:54:39.920437</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;request&quot; application component
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
-(82)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
-(264)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
-(50)</pre></td>
-	</tr>	<tr style="background:#FFFFFF">
-		<td align="center">18:54:39.920569</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;urlManager&quot; application component
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
-(84)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
-(264)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
-(50)</pre></td>
-	</tr>	<tr style="background:#F5F5F5">
-		<td align="center">18:54:39.925827</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;themeManager&quot; application component
-in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
-(84)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
-(264)</pre></td>
-	</tr>	<tr style="background:#FFFFFF">
-		<td align="center">18:54:39.930366</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;widgetFactory&quot; application component
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (1)
-in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
-(84)</pre></td>
-	</tr>	<tr style="background:#F5F5F5">
-		<td align="center">18:54:39.932549</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;user&quot; application component
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
-in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
-	</tr>	<tr style="background:#FFFFFF">
-		<td align="center">18:54:39.933823</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;session&quot; application component
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
-in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
-	</tr>	<tr style="background:#F5F5F5">
-		<td align="center">18:54:39.936489</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;coreMessages&quot; application component
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (62)
-in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
-in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
-	</tr>	<tr style="background:#FFFFFF">
-		<td align="center">18:54:39.938100</td>
-		<td>trace</td>
-		<td>system.CModule</td>
-		<td><pre>Loading &quot;clientScript&quot; application component
-in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
-(84)
-in
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
-(264)</pre></td>
-	</tr></table>
-<!-- end of log messages -->

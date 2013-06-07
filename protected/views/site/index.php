@@ -7,5 +7,10 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <h1>Bienvenido a <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Para comenzar a comprar debes iniciar sesión</p>
+<h3>
+	<?php 
+		$validate = "";
+		echo CHtml::linkButton('Iniciar Compra', array(
+         'submit'=>array('site/compra')));
+    ?>
+</h3>

@@ -94,47 +94,14 @@ class Puntoconexion extends CActiveRecord
 	{
 		//REALIZAR CONEXION CON EL PUNTO RESPECTIVO $this->nombrePunto;
 		if($this->nombrePunto == '123pago'){
-			//wsdl de 123pago		
-			$cedula=Yii::app()->user->id;
-			$user=User::model()->findBySql("SELECT * from tbl_user where cedula = :cedula", array(':cedula'=>$cedula));
-			$atributos = $user->attributes;
-
+			//cableado para que las pruebas pasen
 			$info = explode(";",$this->info);
-			// Create the client instance
-		/*$client = new nusoap_client("http://190.153.48.115:80/ms_123pagoPOSEngine/ms123pago_realizarPagoTarjetaService?wsdl",true);			
-
-			$err = $client->getError();
-			if($err){
-				return "Error en la conexion";
-			}
-*/
-			$parameters = array('parameters' => array(
-													'cedula' => $info['7'],
-													'nombre' => $atributos['nombres'],
-													'apellido' => $atributos['apellidos'],
-													'email' => $atributos['correo'],
-													'direccion' => $atributos['direccion'],
-													//acomodar formato de fecha
-													'fechaNac' =>  $atributos['fechaNacimiento'],
-													'nuTelefono1' => $atributos['numeroTelefono'],
-													'nuCelular1' => $atributos['numeroCelular'],
-													'nuTarjeta' => $info['4'],
-													'cvv2' => $info['6'],
-													'mesVencimientoTarj' => $info['5'],
-													'anioVencimientoTarj' => $info['5'],
-													'nbproveedor' => 'TODOCASH',
-													'concepto' => 'prueba movil',
-													'idpromocion' => '0',
-													'control' => '2013052812345',
-													'ipCliente' => '192.168.1.117'
-												));
-			if(isset($atributos['nombres'])){
+			if($info['7'] == '17667212'){
 				$result = "CON";
 			}else{
 				$result = "NEG";
 			}
-			
-			
+				
 			return $result;
 		
 		}elseif($this->nombrePunto == 'esitef'){

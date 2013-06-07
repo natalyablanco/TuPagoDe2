@@ -1,1 +1,136 @@
-nooooo
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="language" content="en" />
+
+  <link rel="shortcut icon" href="/TuPagoDe2/themes/mattskitchen/favicon.ico" type="image/x-icon" >
+
+  <!-- blueprint CSS framework -->
+  <link rel="stylesheet" type="text/css" href="/TuPagoDe2/themes/mattskitchen/css/screen.css" media="screen, projection" />
+  <link rel="stylesheet" type="text/css" href="/TuPagoDe2/themes/mattskitchen/css/print.css" media="print" />
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" type="text/css" href="/TuPagoDe2/themes/mattskitchen/css/ie.css" media="screen, projection" />
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/TuPagoDe2/themes/mattskitchen/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/TuPagoDe2/themes/mattskitchen/css/form.css" />
+
+  <script src="/TuPagoDe2/js/modernizr-2.0.6.min.js"></script>
+
+  <title>TuPago.de</title>
+</head>
+
+<body>
+
+<div class="container" id="wrapper">
+
+  <header id="header">
+    <div id="logo"><a href="/">TuPago.de</a></div>
+
+    <nav id="mainmenu">
+            <ul id="yw0">
+<li class="first"><a href="/TuPagoDe2/index.php?r=site/index">Home</a></li>
+<li><a href="/TuPagoDe2/index.php?r=site/contact">Contact</a></li>
+<li class="last"><a href="/TuPagoDe2/index.php?r=site/login">Login</a></li>
+</ul>    </nav><!-- mainmenu -->
+  </header><!-- header -->
+
+  <div id="main-wrapper"><div id="main" role="main">
+    <section id="content">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+
+function loading(){
+  $('.loading').fadeIn('fast');
+  
+}
+ 
+</script>
+
+<h1>Bienvenido a <i>TuPago.de</i></h1>
+
+<p>Juego de Tronos - George R. R. Martin</p>
+
+<p></p>
+<ul>
+	<li><b><i>Cancion de Hielo y Fuego 1 </i></b></li>
+	
+</ul>
+<img src="themes/mattskitchen/img/got.jpg" alt="GOT" height="42" width="42" class="image"></img>
+<br>
+<br>
+
+<h1>Datos de Compra</h1>
+<form method="post" action="index.php?r=site/validate" id="payment_form">
+     <label for="amount">Amount</label>
+     <input type="text" name="form[amount]" id="amount" value="500" disabled/><br>
+     <input type="hidden" name="form[amount]" id="amount" value="500" />
+
+     <label for="merchant_usn">Merchant USN</label>
+     <input type="text" name="form[merchant_usn]" id="merchant_usn" value="19949576" disabled/><br>
+     <input type="hidden" name="form[merchant_usn]" id="merchant_usn" value="19949576" />
+
+     <label for="merchant_id">Merchant Id</label>
+     <input type="text" name="form[merchant_id]" id="merchant_id" value="TESTSTORE" disabled/><br>
+     <input type="hidden" name="form[merchant_id]" id="merchant_id" value="TESTSTORE"/>
+
+     <label for="order_id">Order Id</label>
+     <input type="text" name="form[order_id]" id="order_id" value="19949576" disabled/><br>
+     <input type="hidden" name="form[order_id]" id="order_id" value="19949576" />
+     
+     <label for="card_number">Card Number</label>
+     <input type="text" name="form[card_number]" id="card_number" value="" maxlength="19"/><br>
+     
+     <label for="card_expiry">Expiry Date</label>
+     <input type="text" name="form[card_expiry]" id="card_expiry" value="" maxlength="4"/><br>
+     
+     <label for="card_security">Security Code</label>
+     <input type="text" name="form[card_security]" id="card_security" value="" maxlength="5"/><br>
+     
+     <label for="card_id">Id User</label>
+     <input type="text" name="form[user_id]" id="card_id" maxlength="8" value=""/><br>
+     
+     <label for="card_type">Tipo</label>
+     <select id="card_type" name="form[card_type]">
+          <option value="visa">Visa</option>
+          <option value="mastercard" >Master Card</option>
+          <option value="amex">American Express</option>
+          <option value="diners">Diners</option>
+          <option value="hipercard">Hipercard</option>
+     </select> 
+     <br>
+     <label for="card_bank">Banco Emisor</label>
+     <select id="card_bank" name="form[card_bank]">
+          <option value="banesco">Banesco</option>
+          <option value="provincial" >Provincial</option>
+     </select>     
+
+     <br>
+     <input type="submit" value="Validar" id="click" onClick="javascript: loading();"  />
+</form>
+<br>
+<img class="loading" src="themes/mattskitchen/img/loader.gif"  alt="loading" style="display:none"></img>
+</section><!-- content -->
+  </div></div><!-- main -->
+
+  <footer id="footer">
+    <nav id="footermenu">
+      <ul id="yw1">
+<li><a href="/TuPagoDe2/index.php?r=site/index">Home</a></li>
+<li><a href="/TuPagoDe2/index.php?r=site/contact">Contact</a></li>
+<li><a href="/TuPagoDe2/index.php?r=site/login">Login</a></li>
+</ul>    </nav>
+    <div class="content">
+      Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.    </div>
+  </footer><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>

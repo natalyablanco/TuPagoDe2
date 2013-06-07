@@ -35,7 +35,7 @@
     <div id="logo"><a href="/">TuPago.de</a></div>
 
     <nav id="mainmenu">
-            <ul id="yw2">
+            <ul id="yw12">
 <li class="first"><a href="/TupagoDe2/index.php?r=site/index">Home</a></li>
 <li><a href="/TupagoDe2/index.php?r=site/contact">Contact</a></li>
 <li class="active last"><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
@@ -54,10 +54,10 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<label for="LoginForm_username" class="required">Username <span class="required">*</span></label>		<input name="LoginForm[username]" id="LoginForm_username" type="text" />		<div class="errorMessage" id="LoginForm_username_em_" style="display:none"></div>	</div>
+		<label class="error required" for="LoginForm_username">Username <span class="required">*</span></label>		<input name="LoginForm[username]" id="LoginForm_username" type="text" value="" class="error" />		<div class="errorMessage" id="LoginForm_username_em_">Username cannot be blank.</div>	</div>
 
 	<div class="row">
-		<label for="LoginForm_password" class="required">Password <span class="required">*</span></label>		<input name="LoginForm[password]" id="LoginForm_password" type="password" />		<div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>		<p class="hint">
+		<label class="error required" for="LoginForm_password">Password <span class="required">*</span></label>		<input name="LoginForm[password]" id="LoginForm_password" type="password" value="" class="error" />		<div class="errorMessage" id="LoginForm_password_em_">Password cannot be blank.</div>		<p class="hint">
 			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
 		</p>
 	</div>
@@ -66,7 +66,7 @@
 		<input id="ytLoginForm_rememberMe" type="hidden" value="0" name="LoginForm[rememberMe]" /><input name="LoginForm[rememberMe]" id="LoginForm_rememberMe" value="1" type="checkbox" />		<label for="LoginForm_rememberMe">Remember me next time</label>		<div class="errorMessage" id="LoginForm_rememberMe_em_" style="display:none"></div>	</div>
 
 	<div class="row buttons">
-		<input type="submit" name="yt1" value="Login" />	</div>
+		<input type="submit" name="yt6" value="Login" />	</div>
 
 </form></div><!-- form -->
 </section><!-- content -->
@@ -74,7 +74,7 @@
 
   <footer id="footer">
     <nav id="footermenu">
-      <ul id="yw3">
+      <ul id="yw13">
 <li><a href="/TupagoDe2/index.php?r=site/index">Home</a></li>
 <li><a href="/TupagoDe2/index.php?r=site/contact">Contact</a></li>
 <li class="active"><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>

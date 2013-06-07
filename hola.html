@@ -1,22 +1,73 @@
 Codeception PHP Testing Framework v1.6.1.1
 Powered by PHPUnit 3.7.19 by Sebastian Bergmann.
- 
-Suite functional started
-Trying to escoger banesco como el banco emisor de la tarjeta para comprar el libro de got (ChooseBank123Cept.php)
-Scenario:
-* I am on page "index.php?r=site/login"
-* I fill field "Username ","natalya@correo.com"
-* I fill field "Password ","123456"
-* I am on page "index.php?r=site/compra"
-* I see "Juego de Tronos - George R. R. Martin"
-* I see "Datos de Compra"
-* I fill field "Card Number","4563470000000000004"
-* I fill field "Expiry Date","1016"
-* I fill field "Security Code","12345"
-* I fill field "Id User","12584345"
-* I select option "Tipo","visa"
-* I select option "Banco Emisor","banesco"
-* I click "Validar"
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="language" content="en" />
+
+  <link rel="shortcut icon" href="/TupagoDe2/themes/mattskitchen/favicon.ico" type="image/x-icon" >
+
+  <!-- blueprint CSS framework -->
+  <link rel="stylesheet" type="text/css" href="/TupagoDe2/themes/mattskitchen/css/screen.css" media="screen, projection" />
+  <link rel="stylesheet" type="text/css" href="/TupagoDe2/themes/mattskitchen/css/print.css" media="print" />
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" type="text/css" href="/TupagoDe2/themes/mattskitchen/css/ie.css" media="screen, projection" />
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/TupagoDe2/themes/mattskitchen/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/TupagoDe2/themes/mattskitchen/css/form.css" />
+
+  <script src="/TupagoDe2/js/modernizr-2.0.6.min.js"></script>
+
+  <title>TuPago.de - Error</title>
+</head>
+
+<body>
+
+<div class="container" id="wrapper">
+
+  <header id="header">
+    <div id="logo"><a href="/">TuPago.de</a></div>
+
+    <nav id="mainmenu">
+            <ul id="yw0">
+<li class="first"><a href="/TupagoDe2/index.php?r=site/index">Home</a></li>
+<li><a href="/TupagoDe2/index.php?r=site/inicio">Compra</a></li>
+<li><a href="/TupagoDe2/index.php?r=site/contact">Contact</a></li>
+<li class="last"><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
+</ul>    </nav><!-- mainmenu -->
+  </header><!-- header -->
+
+  <div id="main-wrapper"><div id="main" role="main">
+    <section id="content">
+	
+<h2>Error 500</h2>
+
+<div class="error">
+Array to string conversion</div></section><!-- content -->
+  </div></div><!-- main -->
+
+  <footer id="footer">
+    <nav id="footermenu">
+      <ul id="yw1">
+<li><a href="/TupagoDe2/index.php?r=site/index">Home</a></li>
+<li><a href="/TupagoDe2/index.php?r=site/inicio">Compra</a></li>
+<li><a href="/TupagoDe2/index.php?r=site/contact">Contact</a></li>
+<li><a href="/TupagoDe2/index.php?r=site/login">Login</a></li>
+</ul>    </nav>
+    <div class="content">
+      Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.    </div>
+  </footer><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>
 <!-- start log messages -->
 <table class="yiiLog" width="100%" cellpadding="2" style="border-spacing:1px;font:11px Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;color:#666666;">
 	<tr>
@@ -31,103 +82,33 @@ Scenario:
 		<th>Message</th>
 	</tr>
 	<tr style="background:#FFC0CB">
-		<td align="center">20:11:36.415407</td>
+		<td align="center">21:54:50.095444</td>
 		<td>error</td>
 		<td>php</td>
-		<td><pre>Trying to get property of non-object
-(C:\wamp\www\TuPagoDe2\protected\models\Puntoconexion.php:100)
+		<td><pre>Array to string conversion
+(phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Module/Db.php:194)
 Stack trace:
-#0 C:\yii\framework\web\CController.php(308):
-CInlineAction-&gt;runWithParams()
-#1 C:\yii\framework\web\filters\CFilterChain.php(133):
-SiteController-&gt;runAction()
-#2 C:\yii\framework\web\filters\CFilter.php(40): CFilterChain-&gt;run()
-#3 C:\yii\framework\web\CController.php(1145):
-CAccessControlFilter-&gt;filter()
-#4 C:\yii\framework\web\filters\CInlineFilter.php(58):
-SiteController-&gt;filterAccessControl()
-#5 C:\yii\framework\web\filters\CFilterChain.php(130):
-CInlineFilter-&gt;filter()
-#6 C:\yii\framework\web\CController.php(291): CFilterChain-&gt;run()
-#7 C:\yii\framework\web\CController.php(265):
-SiteController-&gt;runActionWithFilters()
-#8 C:\yii\framework\web\CWebApplication.php(282): SiteController-&gt;run()
-#9 C:\yii\framework\web\CWebApplication.php(141):
-CWebApplication-&gt;runController()
-#10 C:\yii\framework\base\CApplication.php(169):
-CWebApplication-&gt;processRequest()
-#11
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php(84):
-CWebApplication-&gt;run()
-#12
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php(264):
-Codeception\Util\Connector\Yii1-&gt;doRequest()
-#13
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php(108):
-Codeception\Util\Connector\Yii1-&gt;request()
-#14
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php(72):
-Codeception\Module\Yii1-&gt;submitFormWithButton()
-#15 unknown(0): Codeception\Module\Yii1-&gt;click()
-#16
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Step.php(126):
-call_user_func_array()
-#17
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/TestCase.php(28):
-Codeception\Step\Action-&gt;run()
-#18
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Scenario.php(102):
-Codeception\TestCase\Cept-&gt;runStep()
-#19 C:\wamp\www\TuPagoDe2\tests\functional\TestGuy.php(115):
-Codeception\Scenario-&gt;runStep()
-#20 C:\wamp\www\TuPagoDe2\tests\functional\ChooseBank123Cept.php(16):
-TestGuy-&gt;click()
-#21
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/TestCase/Cept.php(72):
-require()
-#22 unknown(0): Codeception\TestCase\Cept-&gt;testCodecept()
-#23
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(976):
-ReflectionMethod-&gt;invokeArgs()
-#24
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(831):
-Codeception\TestCase\Cept-&gt;runTest()
-#25
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestResult.php(648):
-Codeception\TestCase\Cept-&gt;runBare()
-#26
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(776):
-PHPUnit_Framework_TestResult-&gt;run()
-#27
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestSuite.php(775):
-Codeception\TestCase\Cept-&gt;run()
-#28
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestSuite.php(745):
-PHPUnit_Framework_TestSuite-&gt;runTest()
-#29
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/PHPUnit/Runner.php(107):
-PHPUnit_Framework_TestSuite-&gt;run()
-#30
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php(132):
-Codeception\PHPUnit\Runner-&gt;doEnhancedRun()
-#31
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Codecept.php(110):
-Codeception\SuiteManager-&gt;run()
-#32
-phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Command/Run.php(74):
+#0
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php(44):
+Codeception\SuiteManager-&gt;initializeModules()
+#1
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Codecept.php(102):
+Codeception\SuiteManager-&gt;__construct()
+#2
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Command/Run.php(79):
 Codeception\Codecept-&gt;runSuite()
-#33
+#3
 phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(240):
 Codeception\Command\Run-&gt;execute()
-#34
+#4
 phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(193):
 Codeception\Command\Run-&gt;run()
-#35
+#5
 phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(106):
 Symfony\Component\Console\Application-&gt;doRun()
-#36 phar://C:/wamp/www/TuPagoDe2/codecept.phar/codecept(32):
+#6 phar://C:/wamp/www/TuPagoDe2/codecept.phar/codecept(32):
 Symfony\Component\Console\Application-&gt;run()
-#37 C:\wamp\www\TuPagoDe2\codecept.phar(7): require_once()
-REQUEST_URI=/TupagoDe2/index.phpr=site/validate</pre></td>
+#7 C:\wamp\www\TuPagoDe2\codecept.phar(7): require_once()
+</pre></td>
 	</tr></table>
 <!-- end of log messages -->

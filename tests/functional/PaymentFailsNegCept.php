@@ -9,5 +9,7 @@ $I->fillField('Expiry Date','1016');
 $I->fillField('Security Code','12345');
 $I->fillField('Id User','12584345');
 $I->selectOption('Tipo', 'visa');
+$I->selectOption('Banco Emisor', 'provincial');
 $I->click('Validar');
+$I->amOnPage('index.php?r=site/validate');
 $I->see('Tarjeta Negada por el Banco');

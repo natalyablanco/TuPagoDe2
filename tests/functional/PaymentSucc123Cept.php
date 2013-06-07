@@ -11,4 +11,5 @@ $I->fillField('Id User','12584345');
 $I->selectOption('Tipo', 'visa');
 $I->selectOption('Banco Emisor', 'banesco');
 $I->click('Validar');
+$I->amOnPage('index.php?r=site/validate');
 $I->see('Compra Exitosa');

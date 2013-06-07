@@ -1,6 +1,8 @@
 <?php
 $I = new WebGuy($scenario);
 $I->wantTo('Escoger Banesco como el banco emisor de la tarjeta para comprar el libro de GOT');
+$I->amOnPage('index.php?r=site/inicio');
+$I->click('Comprar');
 $I->amOnPage('index.php?r=site/compra');
 $I->see('Juego de Tronos - George R. R. Martin');
 $I->see('Datos de Compra');
