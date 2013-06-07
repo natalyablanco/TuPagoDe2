@@ -1,0 +1,34 @@
+<!-- start log messages -->
+<table class="yiiLog" width="100%" cellpadding="2" style="border-spacing:1px;font:11px Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;color:#666666;">
+	<tr>
+		<th style="background:black;color:white;" colspan="5">
+			Application Log
+		</th>
+	</tr>
+	<tr style="background-color: #ccc;">
+	    <th style="width:120px">Timestamp</th>
+		<th>Level</th>
+		<th>Category</th>
+		<th>Message</th>
+	</tr>
+	<tr style="background:#FFC0CB">
+		<td align="center">20:15:45.687623</td>
+		<td>error</td>
+		<td>exception.CHttpException.404</td>
+		<td><pre>exception &#039;CHttpException&#039; with message &#039;The system is unable to find the
+requested action &quot;inicio&quot;.&#039; in C:\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\yii\framework\web\CController.php(270):
+CController-&gt;missingAction(&#039;inicio&#039;)
+#1 C:\yii\framework\web\CWebApplication.php(282):
+CController-&gt;run(&#039;inicio&#039;)
+#2 C:\yii\framework\web\CWebApplication.php(141):
+CWebApplication-&gt;runController(&#039;site/inicio&#039;)
+#3 C:\yii\framework\base\CApplication.php(169):
+CWebApplication-&gt;processRequest()
+#4 C:\wamp\www\TuPagoDe2\index.php(40): CApplication-&gt;run()
+#5 {main}
+REQUEST_URI=/TuPagoDe2/index.php?r=site%2Finicio
+---</pre></td>
+	</tr></table>
+<!-- end of log messages -->

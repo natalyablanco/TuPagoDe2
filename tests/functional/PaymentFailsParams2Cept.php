@@ -11,4 +11,4 @@ $I->fillField('Id User','12584345');
 $I->selectOption('Tipo', 'mastercard');
 $I->click('Validar');
 $I->amOnPage('index.php?r=site/validate');
-$I->see('Numero de Tarjeta Errado');
+$I->see('Numero de Tarjeta Errado - Prefijo no concuerda con tipo de tarjeta');

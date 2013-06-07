@@ -4,7 +4,7 @@
 require_once '/../../protected/models/Transaction.php';
 require_once '/../../protected/models/Puntoconexion.php';
 
-class TransactionTestTest extends \PHPUnit_Framework_TestCase
+class TransactionTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
@@ -24,22 +24,10 @@ class TransactionTestTest extends \PHPUnit_Framework_TestCase
         $orderid = "1232332";
         $punto = 'esite';
 
-        $this->assertTrue(Transaction::model()->saveTransaction($merchant_usn, $amount,
+        $this->assertTrue(Transaction::model()->createTransaction($merchant_usn, $amount,
             $nit,$trans_status,$message,$payment_type,$orderid,$punto));
 
     }
-}
-
-
-/*
-
-<?php
-
-
-class TransactionTest extends  \Codeception\TestCase\Test
-{
-       
-    
 
     public function testUniqueTransaction(){
         $merchant_usn = "19945x9215v6";
@@ -51,20 +39,20 @@ class TransactionTest extends  \Codeception\TestCase\Test
         $orderid = "34253";
         $punto = 'esite';
 
-        $this->assertTrue(Transaction::model()->saveTransaction($merchant_usn, $amount,
+        $this->assertTrue(Transaction::model()->createTransaction($merchant_usn, $amount,
             $nit,$trans_status,$message,$payment_type,$orderid,$punto));
         try {
             //try to register same merchant_id, it should throw exception and should 
             // skip the below assertion and must execute the catch block.           
-            $this->assertFalse(Transaction::model()->saveTransaction($merchant_usn, $amount,
+            $this->assertFalse(Transaction::model()->createTransaction($merchant_usn, $amount,
             $nit,$trans_status,$message,$payment_type,$orderid,$punto));
         }
         catch (CDbException $exp){
              echo "excep";
         }
     }
-    
-    /*Probar que los valores de una transaccion se actualiza
+
+         /*Probar que los valores de una transaccion se actualiza*/
     public function testUpdateTransaction(){
         $merchant_usn = "1994c21532";
         $amount = "809";
@@ -75,7 +63,7 @@ class TransactionTest extends  \Codeception\TestCase\Test
         $orderid = "12314";
         $punto = 'esite';
 
-        $this->assertTrue(Transaction::model()->saveTransaction($merchant_usn, $amount,
+        $this->assertTrue(Transaction::model()->createTransaction($merchant_usn, $amount,
             $nit,$trans_status,$message,$payment_type,$orderid,$punto));
 
 
@@ -101,23 +89,131 @@ class TransactionTest extends  \Codeception\TestCase\Test
         $this->assertEquals($model2->payment_type, $payment_type2);
         
     }
+
+    public function testPaymentNeg()
+    {
+        //probar cuándo un pago está rechazado por el banco
+        /*
+        $puntoConex = new Puntoconexion();
+        $puntoConex->nombrePunto = 'esitef';
+        // DEBE TENER INFO.
+        //$puntoConex->info = $_POST['form'];
+        $puntoConex->createCon();*/
+
+        $puntoConex = $this->getMock('Puntoconexion', array('createCon'));
+        //print_r($mock); die;
+        $puntoConex->expects($this->any())
+                ->method('createCon')
+                ->will($this->returnValue('NEG'));
     
+        
+        // Create a Subject object and attach the mocked
+        // Observer object to it.
+        $transaction = new Transaction;
+        $transaction->using($puntoConex);
+        
+        $this->assertEquals($puntoConex->createCon(), "NEG");
+
+       
+    }
+     
+     public function testPaymentAprove()
+    {
+        //probar cuándo un pago está rechazado por el banco
+        /*
+        $puntoConex = new Puntoconexion();
+        $puntoConex->nombrePunto = 'esitef';
+        // DEBE TENER INFO.
+        //$puntoConex->info = $_POST['form'];
+        $puntoConex->createCon();*/
+
+        $puntoConex = $this->getMock('Puntoconexion', array('createCon'));
+        //print_r($mock); die;
+        $puntoConex->expects($this->any())
+                ->method('createCon')
+                ->will($this->returnValue('CON'));
+    
+        
+        // Create a Subject object and attach the mocked
+        // Observer object to it.
+        $transaction = new Transaction;
+        $transaction->using($puntoConex);
+        
+        $this->assertEquals($puntoConex->createCon(), "CON");
+
+       
+    }
+
+     public function testPaymentNeg123()
+    {
+        //probar cuándo un pago está rechazado por el banco
+        /*
+        $puntoConex = new Puntoconexion();
+        $puntoConex->nombrePunto = 'esitef';
+        // DEBE TENER INFO.
+        //$puntoConex->info = $_POST['form'];
+        $puntoConex->createCon();*/
+
+        $puntoConex = $this->getMock('Puntoconexion', array('createCon'));
+        //print_r($mock); die;
+        $puntoConex->expects($this->any())
+                ->method('createCon')
+                ->will($this->returnValue('NEG'));
+    
+        
+        // Create a Subject object and attach the mocked
+        // Observer object to it.
+        $transaction = new Transaction;
+        $transaction->using($puntoConex);
+        
+        $this->assertEquals($puntoConex->createCon(), "NEG");
+
+       
+    }
+     
+     public function testPaymentAprove123()
+    {
+        //probar cuándo un pago está rechazado por el banco
+        /*
+        $puntoConex = new Puntoconexion();
+        $puntoConex->nombrePunto = 'esitef';
+        // DEBE TENER INFO.
+        //$puntoConex->info = $_POST['form'];
+        $puntoConex->createCon();*/
+
+        $puntoConex = $this->getMock('Puntoconexion', array('createCon'));
+        //print_r($mock); die;
+        $puntoConex->expects($this->any())
+                ->method('createCon')
+                ->will($this->returnValue('CON'));
+    
+        
+        // Create a Subject object and attach the mocked
+        // Observer object to it.
+        $transaction = new Transaction;
+        $transaction->using($puntoConex);
+        
+        $this->assertEquals($puntoConex->createCon(), "CON");
+
+       
+    }
+     
     public function testMissingParameters() {
         //try to register with no parameters 
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","","","","","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","","","","","",""));
         //one paramater missing
-        $this->assertFalse(Transaction::model()->saveTransaction("19945x921532", "","","","","","",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "809","","","","","",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","4vv3v53v33","","","","",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","","con","","","",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","","","0:Transacao OK!","","",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","","","","C","",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","","","","","1232332",""));
-        $this->assertFalse(Transaction::model()->saveTransaction("", "","","","","","","esite"));
+        $this->assertFalse(Transaction::model()->createTransaction("19945x921532", "","","","","","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "809","","","","","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","4vv3v53v33","","","","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","","con","","","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","","","0:Transacao OK!","","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","","","","C","",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","","","","","1232332",""));
+        $this->assertFalse(Transaction::model()->createTransaction("", "","","","","","","esite"));
         //letters in amount
-        $this->assertFalse(Transaction::model()->saveTransaction("19945x921532", "vw4","4vv3v53v33","con","0:Transacao OK!","C","1232332",'otro'));
+        $this->assertFalse(Transaction::model()->createTransaction("19945x921532", "vw4","4vv3v53v33","con","0:Transacao OK!","C","1232332",'otro'));
         //Payment_type longer than 1
-        $this->assertFalse(Transaction::model()->saveTransaction("19945x921532", "vw4","4vv3v53v33","con","0:Transacao OK!","C32f","1232332",'otro'));
+        $this->assertFalse(Transaction::model()->createTransaction("19945x921532", "vw4","4vv3v53v33","con","0:Transacao OK!","C32f","1232332",'otro'));
         
     }
 
@@ -129,7 +225,7 @@ class TransactionTest extends  \Codeception\TestCase\Test
         $trans_status = "CON";
         $message = "0:Transacao OK!";
         $payment_type = "C";
-        $orderid = "123452232";
+        $orderid = "123456789";
         $punto = 'esite';
 
         $merchant_usn2 = "1x92112e12f";
@@ -141,13 +237,12 @@ class TransactionTest extends  \Codeception\TestCase\Test
         $orderid2 = "23423522";
         $punto2 = 'esite';
 
-        $this->assertTrue(Transaction::model()->saveTransaction($merchant_usn, $amount,
+        $this->assertTrue(Transaction::model()->createTransaction($merchant_usn, $amount,
             $nit,$trans_status,$message,$payment_type,$orderid,$punto));
 
-        $this->assertTrue(Transaction::model()->saveTransaction($merchant_usn2, $amount2,
+        $this->assertTrue(Transaction::model()->createTransaction($merchant_usn2, $amount2,
             $nit2,$trans_status2,$message2,$payment_type2,$orderid2,$punto2));
-
-        $model = Transaction::model()->findByPk($orderid);
+$model = Transaction::model()->findByPk($orderid);
         $model2 = Transaction::model()->findByPk($orderid2);
 
         $this->assertTrue(Transaction::model()->itsApprove($orderid));
@@ -157,27 +252,4 @@ class TransactionTest extends  \Codeception\TestCase\Test
 
     }
 
-    public function testPaymentNeg()
-    {
-        // Create a mock for the SomeClass class,
-        // only mock the update() method.
-        $puntoConex = $this->getMock('Puntoconexion', array('createCon'));
-        //print_r($mock); die;
-        $puntoConex->expects($this->any())
-                ->method('createCon')
-                ->with($this->equalTo('esite'))
-                ->will($this->returnValue('Neg'));
-    
-        // Create a Subject object and attach the mocked
-        // Observer object to it.
-        $transaction = new Transaction;
-        $transaction->using($puntoConex);
- 
-        // Call the doSomething() method on the $subject object
-        // which we expect to call the mocked Observer object's
-        // update() method with the string 'something'.
-        $transaction->createTransaction();
-    }
-     
-
-}*/
+}

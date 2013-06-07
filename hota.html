@@ -1,0 +1,1658 @@
+Codeception PHP Testing Framework v1.6.1.1
+Powered by PHPUnit 3.7.19 by Sebastian Bergmann.
+ 
+
+Suite functional started
+Trying to escoger banesco como el banco emisor de la tarjeta para comprar el libro de got (ChooseBank123Cept.php) - Ok
+Trying to escoger banesco como el banco emisor de la tarjeta para comprar el libro de got (ChooseBankCept.php)<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>PHP notice</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>PHP notice</h1>
+
+	<p class="message">
+		Undefined index: _transient	</p>
+
+	<div class="source">
+		<p class="file">C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php(226)</p>
+		<div class="code"><pre><span class="ln">214</span>     * @deprecated
+<span class="ln">215</span>     * @see    expandEntities
+<span class="ln">216</span>     */
+<span class="ln">217</span>     var $xmlEntities = array(&#039;quot&#039; =&gt; &#039;&quot;&#039;,&#039;amp&#039; =&gt; &#039;&amp;&#039;,
+<span class="ln">218</span>         &#039;lt&#039; =&gt; &#039;&lt;&#039;,&#039;gt&#039; =&gt; &#039;&gt;&#039;,&#039;apos&#039; =&gt; &quot;&#039;&quot;);
+<span class="ln">219</span> 
+<span class="ln">220</span>     /**
+<span class="ln">221</span>     * constructor
+<span class="ln">222</span>     *
+<span class="ln">223</span>     * @access    public
+<span class="ln">224</span>     */
+<span class="ln">225</span>     function nusoap_base() {
+<span class="error"><span class="ln error-ln">226</span>         $this-&gt;debugLevel = $GLOBALS[&#039;_transient&#039;][&#039;static&#039;][&#039;nusoap_base&#039;][&#039;globalDebugLevel&#039;];
+</span><span class="ln">227</span>     }
+<span class="ln">228</span> 
+<span class="ln">229</span>     /**
+<span class="ln">230</span>     * gets the global debug level, which applies to future instances
+<span class="ln">231</span>     *
+<span class="ln">232</span>     * @return    integer    Debug level 0-9, where 0 turns off
+<span class="ln">233</span>     * @access    public
+<span class="ln">234</span>     */
+<span class="ln">235</span>     function getGlobalDebugLevel() {
+<span class="ln">236</span>         return $GLOBALS[&#039;_transient&#039;][&#039;static&#039;][&#039;nusoap_base&#039;][&#039;globalDebugLevel&#039;];
+<span class="ln">237</span>     }
+<span class="ln">238</span> 
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace app expanded">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php(7295): <strong>nusoap_base</strong>-><strong>nusoap_base</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">7290</span>     * @param    integer $response_timeout set the response timeout
+<span class="ln">7291</span>     * @param    string $portName optional portName in WSDL document
+<span class="ln">7292</span>     * @access   public
+<span class="ln">7293</span>     */
+<span class="ln">7294</span>     function nusoap_client($endpoint,$wsdl = false,$proxyhost = false,$proxyport = false,$proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $portName = &#039;&#039;){
+<span class="error"><span class="ln error-ln">7295</span>         parent::nusoap_base();
+</span><span class="ln">7296</span>         $this-&gt;endpoint = $endpoint;
+<span class="ln">7297</span>         $this-&gt;proxyhost = $proxyhost;
+<span class="ln">7298</span>         $this-&gt;proxyport = $proxyport;
+<span class="ln">7299</span>         $this-&gt;proxyusername = $proxyusername;
+<span class="ln">7300</span>         $this-&gt;proxypassword = $proxypassword;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\wamp\www\TuPagoDe2\protected\models\Puntoconexion.php(166): <strong>nusoap_client</strong>-><strong>nusoap_client</strong>(&quot;https://esitef-homologacao.softwareexpress.com.br/e-sitef/Paymen...&quot;, true)				</div>
+
+				<div class="code"><pre><span class="ln">161</span>             return $result;
+<span class="ln">162</span>             
+<span class="ln">163</span>             return &quot;CON&quot;;
+<span class="ln">164</span>         }elseif($this-&gt;nombrePunto == &#039;esitef&#039;){
+<span class="ln">165</span> 
+<span class="error"><span class="ln error-ln">166</span>             $client = new nusoap_client(&quot;https://esitef-homologacao.softwareexpress.com.br/e-sitef/Payment2?wsdl&quot;,true);
+</span><span class="ln">167</span>             $info = explode(&quot;;&quot;,$this-&gt;info);
+<span class="ln">168</span>             
+<span class="ln">169</span>             $err = $client-&gt;getError();
+<span class="ln">170</span>             if($err){
+<span class="ln">171</span>                 return &quot;Error en la conexion&quot;;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php(176): <strong>Puntoconexion</strong>-><strong>createCon</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">171</span>                         break;
+<span class="ln">172</span>                     default:
+<span class="ln">173</span>                         break;
+<span class="ln">174</span>                 }/**/
+<span class="ln">175</span> 
+<span class="error"><span class="ln error-ln">176</span>                 $conectionResponse = $crearConexion-&gt;createCon();
+</span><span class="ln">177</span>                 $result = $conectionResponse[&#039;paymentResponse&#039;][&#039;transactionStatus&#039;];
+<span class="ln">178</span> 
+<span class="ln">179</span>                 if($result == &quot;NEG&quot;){
+<span class="ln">180</span>                     $validate = &quot;Tarjeta Negada por el Banco&quot;;
+<span class="ln">181</span>                 }elseif($result == &quot;CON&quot;){
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\web\actions\CInlineAction.php(49): <strong>SiteController</strong>-><strong>actionValidate</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\web\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array(&quot;r&quot; =&gt; &quot;site/validate&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\web\CController.php(286): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">281</span>      * @see runAction
+<span class="ln">282</span>      */
+<span class="ln">283</span>     public function runActionWithFilters($action,$filters)
+<span class="ln">284</span>     {
+<span class="ln">285</span>         if(empty($filters))
+<span class="error"><span class="ln error-ln">286</span>             $this-&gt;runAction($action);
+</span><span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\web\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array())				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\web\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;validate&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\web\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;site/validate&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\yii\framework\base\CApplication.php(169): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">164</span>     public function run()
+<span class="ln">165</span>     {
+<span class="ln">166</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">167</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">168</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">169</span>         $this-&gt;processRequest();
+</span><span class="ln">170</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">171</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">172</span>     }
+<span class="ln">173</span> 
+<span class="ln">174</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php(84): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">79</span> 
+<span class="ln">80</span>         ob_start();
+<span class="ln">81</span>         Yii::setApplication(null);
+<span class="ln">82</span>         Yii::createApplication($this-&gt;appSettings[&#039;class&#039;],$this-&gt;appSettings[&#039;config&#039;]);
+<span class="ln">83</span>         Yii::app()-&gt;onEndRequest-&gt;add(array($this,&#039;setHeaders&#039;));
+<span class="error"><span class="ln error-ln">84</span>         Yii::app()-&gt;run();
+</span><span class="ln">85</span> 
+<span class="ln">86</span>         $content = ob_get_clean();
+<span class="ln">87</span> 
+<span class="ln">88</span>         $response = new Response($content,200,$this-&gt;getHeaders());
+<span class="ln">89</span>         return $response;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php(264): <strong>Codeception\Util\Connector\Yii1</strong>-><strong>doRequest</strong>(Symfony\Component\BrowserKit\Request)				</div>
+
+				<div class="code"><pre><span class="ln">259</span>         }
+<span class="ln">260</span> 
+<span class="ln">261</span>         if ($this-&gt;insulated) {
+<span class="ln">262</span>             $this-&gt;response = $this-&gt;doRequestInProcess($this-&gt;request);
+<span class="ln">263</span>         } else {
+<span class="error"><span class="ln error-ln">264</span>             $this-&gt;response = $this-&gt;doRequest($this-&gt;request);
+</span><span class="ln">265</span>         }
+<span class="ln">266</span> 
+<span class="ln">267</span>         $response = $this-&gt;filterResponse($this-&gt;response);
+<span class="ln">268</span> 
+<span class="ln">269</span>         $this-&gt;cookieJar-&gt;updateFromResponse($response);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php(108): <strong>Symfony\Component\BrowserKit\Client</strong>-><strong>request</strong>(&quot;POST&quot;, &quot;http://localhost/index.php?r=site/validate&quot;, array(&quot;form&quot; =&gt; array(&quot;amount&quot; =&gt; &quot;500&quot;, &quot;merchant_usn&quot; =&gt; &quot;19949576&quot;, &quot;merchant_id&quot; =&gt; &quot;TESTSTORE&quot;, &quot;order_id&quot; =&gt; &quot;19949576&quot;, ...), &quot;codeception_added_auto_submit&quot; =&gt; &quot;&quot;), array())				</div>
+
+				<div class="code"><pre><span class="ln">103</span>         $form = $this-&gt;getFormFor($button);
+<span class="ln">104</span> 
+<span class="ln">105</span>         $this-&gt;debugSection(&#039;Uri&#039;, $domForm-&gt;getUri());
+<span class="ln">106</span>         $this-&gt;debugSection($domForm-&gt;getMethod(), json_encode($form-&gt;getValues()));
+<span class="ln">107</span> 
+<span class="error"><span class="ln error-ln">108</span>         $this-&gt;crawler = $this-&gt;client-&gt;request($domForm-&gt;getMethod(), $domForm-&gt;getUri(), $form-&gt;getPhpValues(), $form-&gt;getPhpFiles());
+</span><span class="ln">109</span>     }
+<span class="ln">110</span> 
+<span class="ln">111</span>     public function see($text, $selector = null)
+<span class="ln">112</span>     {
+<span class="ln">113</span>         if (!$selector)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#13			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php(72): <strong>Codeception\Util\Framework</strong>-><strong>submitFormWithButton</strong>(Symfony\Component\DomCrawler\Crawler)				</div>
+
+				<div class="code"><pre><span class="ln">67</span>             return;
+<span class="ln">68</span>         }
+<span class="ln">69</span> 
+<span class="ln">70</span>         $button = $this-&gt;crawler-&gt;selectButton($link);
+<span class="ln">71</span>         if (count($button)) {
+<span class="error"><span class="ln error-ln">72</span>             $this-&gt;submitFormWithButton($button);
+</span><span class="ln">73</span>             $this-&gt;debugResponse();
+<span class="ln">74</span>             return;
+<span class="ln">75</span>         }
+<span class="ln">76</span> 
+<span class="ln">77</span>         $nodes = $this-&gt;match($link);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#14			</td>
+			<td class="content">
+				<div class="trace-file">
+										&nbsp;unknown(0): <strong>Codeception\Util\Framework</strong>-><strong>click</strong>(&quot;Validar&quot;)				</div>
+
+							</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#15			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Step.php(126): <strong>call_user_func_array</strong>(array(Codeception\Module\Yii1, &quot;click&quot;), array(&quot;Validar&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">121</span>     {
+<span class="ln">122</span>         $this-&gt;executed = true;
+<span class="ln">123</span>         $activeModule = \Codeception\SuiteManager::$modules[\Codeception\SuiteManager::$actions[$this-&gt;action]];
+<span class="ln">124</span> 
+<span class="ln">125</span>         if (is_callable(array($activeModule, $this-&gt;action))) {
+<span class="error"><span class="ln error-ln">126</span>             $result = call_user_func_array(array($activeModule, $this-&gt;action), $this-&gt;arguments);
+</span><span class="ln">127</span>         } else {
+<span class="ln">128</span>             throw new \RuntimeException(&quot;Action can&#039;t be called&quot;);
+<span class="ln">129</span>         }
+<span class="ln">130</span>         $this-&gt;debugOutput = $activeModule-&gt;_getDebugOutput();
+<span class="ln">131</span>         return $result;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#16			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/TestCase.php(28): <strong>Codeception\Step</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span>     public function runStep(\Codeception\Step $step)
+<span class="ln">24</span>     {
+<span class="ln">25</span>         $this-&gt;trace[] = $step;
+<span class="ln">26</span>         $this-&gt;fire(&#039;step.before&#039;, new \Codeception\Event\Step($this, $step));
+<span class="ln">27</span>         try {
+<span class="error"><span class="ln error-ln">28</span>             $result = $step-&gt;run();
+</span><span class="ln">29</span>         } catch (\Exception $e) {
+<span class="ln">30</span>             $this-&gt;fire(&#039;step.after&#039;, new \Codeception\Event\Step($this, $step));
+<span class="ln">31</span>             throw $e;
+<span class="ln">32</span>         }
+<span class="ln">33</span>         $this-&gt;fire(&#039;step.after&#039;, new \Codeception\Event\Step($this, $step));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#17			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Scenario.php(102): <strong>Codeception\TestCase</strong>-><strong>runStep</strong>(Codeception\Step\Action)				</div>
+
+				<div class="code"><pre><span class="ln">097</span>     {
+<span class="ln">098</span>         if (empty($this-&gt;steps)) return;
+<span class="ln">099</span> 
+<span class="ln">100</span>         $step = $this-&gt;lastStep();
+<span class="ln">101</span>         if (!$step-&gt;executed) {
+<span class="error"><span class="ln error-ln">102</span>             $result = $this-&gt;test-&gt;runStep($step);
+</span><span class="ln">103</span>             $this-&gt;currentStep++;
+<span class="ln">104</span>             $step-&gt;executed = true;
+<span class="ln">105</span>             return $result;
+<span class="ln">106</span>         }
+<span class="ln">107</span>     }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#18			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\wamp\www\TuPagoDe2\tests\functional\TestGuy.php(115): <strong>Codeception\Scenario</strong>-><strong>runStep</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">110</span>      * ! Documentation taken from corresponding module !
+<span class="ln">111</span>      */
+<span class="ln">112</span>     public function click($link, $context = null) {
+<span class="ln">113</span>         $this-&gt;scenario-&gt;action(&#039;click&#039;, func_get_args());
+<span class="ln">114</span>         if ($this-&gt;scenario-&gt;running()) {
+<span class="error"><span class="ln error-ln">115</span>             $result = $this-&gt;scenario-&gt;runStep();
+</span><span class="ln">116</span>             return new Maybe($result);
+<span class="ln">117</span>         }
+<span class="ln">118</span>         return new Maybe();
+<span class="ln">119</span>     }
+<span class="ln">120</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#19			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\wamp\www\TuPagoDe2\tests\functional\ChooseBankCept.php(13): <strong>TestGuy</strong>-><strong>click</strong>(&quot;Validar&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">08</span> $I-&gt;fillField(&#039;Expiry Date&#039;,&#039;1016&#039;);
+<span class="ln">09</span> $I-&gt;fillField(&#039;Security Code&#039;,&#039;12345&#039;);
+<span class="ln">10</span> $I-&gt;fillField(&#039;Id User&#039;,&#039;12584345&#039;);
+<span class="ln">11</span> $I-&gt;selectOption(&#039;Tipo&#039;, &#039;visa&#039;);
+<span class="ln">12</span> $I-&gt;selectOption(&#039;Banco Emisor&#039;, &#039;provincial&#039;);
+<span class="error"><span class="ln error-ln">13</span> $I-&gt;click(&#039;Validar&#039;);
+</span><span class="ln">14</span> $I-&gt;amOnPage(&#039;index.php?r=site/validate&#039;);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#20			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/TestCase/Cept.php(72): <strong>require</strong>(&quot;C:\wamp\www\TuPagoDe2\tests\functional\ChooseBankCept.php&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">67</span>         $this-&gt;fire(&#039;test.before&#039;, new TestEvent($this));
+<span class="ln">68</span>         $scenario-&gt;run();
+<span class="ln">69</span>         if (file_exists($this-&gt;bootstrap)) require $this-&gt;bootstrap;
+<span class="ln">70</span> 
+<span class="ln">71</span>         try {
+<span class="error"><span class="ln error-ln">72</span>             require $this-&gt;testfile;
+</span><span class="ln">73</span>         } catch (\Exception $e) {
+<span class="ln">74</span>             // fails and errors are now handled by Codeception\PHPUnit\Listener
+<span class="ln">75</span>             throw $e;
+<span class="ln">76</span>         }
+<span class="ln">77</span>         $this-&gt;fire(&#039;test.after&#039;, new TestEvent($this));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#21			</td>
+			<td class="content">
+				<div class="trace-file">
+										&nbsp;unknown(0): <strong>Codeception\TestCase\Cept</strong>-><strong>testCodecept</strong>(&quot;ChooseBankCept.php&quot;, &quot;C:\wamp\www\TuPagoDe2\tests\functional\ChooseBankCept.php&quot;, &quot;C:\wamp\www\TuPagoDe2\tests\functional\_bootstrap.php&quot;)				</div>
+
+							</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#22			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(976): <strong>ReflectionMethod</strong>-><strong>invokeArgs</strong>(Codeception\TestCase\Cept, array(&quot;name&quot; =&gt; &quot;ChooseBankCept.php&quot;, &quot;file&quot; =&gt; &quot;C:\wamp\www\TuPagoDe2\tests\functional\ChooseBankCept.php&quot;, &quot;bootstrap&quot; =&gt; &quot;C:\wamp\www\TuPagoDe2\tests\functional\_bootstrap.php&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">971</span>         }
+<span class="ln">972</span> 
+<span class="ln">973</span>         try {
+<span class="ln">974</span>             $testResult = $method-&gt;invokeArgs(
+<span class="ln">975</span>               $this, array_merge($this-&gt;data, $this-&gt;dependencyInput)
+<span class="error"><span class="ln error-ln">976</span>             );
+</span><span class="ln">977</span>         }
+<span class="ln">978</span> 
+<span class="ln">979</span>         catch (Exception $e) {
+<span class="ln">980</span>             $checkException = FALSE;
+<span class="ln">981</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#23			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(831): <strong>PHPUnit_Framework_TestCase</strong>-><strong>runTest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">826</span> 
+<span class="ln">827</span>             $this-&gt;setExpectedExceptionFromAnnotation();
+<span class="ln">828</span>             $this-&gt;setUp();
+<span class="ln">829</span>             $this-&gt;checkRequirements();
+<span class="ln">830</span>             $this-&gt;assertPreConditions();
+<span class="error"><span class="ln error-ln">831</span>             $this-&gt;testResult = $this-&gt;runTest();
+</span><span class="ln">832</span>             $this-&gt;verifyMockObjects();
+<span class="ln">833</span>             $this-&gt;assertPostConditions();
+<span class="ln">834</span>             $this-&gt;status = PHPUnit_Runner_BaseTestRunner::STATUS_PASSED;
+<span class="ln">835</span>         }
+<span class="ln">836</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#24			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestResult.php(648): <strong>PHPUnit_Framework_TestCase</strong>-><strong>runBare</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">643</span>                 }
+<span class="ln">644</span> 
+<span class="ln">645</span>                 $invoker = new PHP_Invoker;
+<span class="ln">646</span>                 $invoker-&gt;invoke(array($test, &#039;runBare&#039;), array(), $_timeout);
+<span class="ln">647</span>             } else {
+<span class="error"><span class="ln error-ln">648</span>                 $test-&gt;runBare();
+</span><span class="ln">649</span>             }
+<span class="ln">650</span>         }
+<span class="ln">651</span> 
+<span class="ln">652</span>         catch (PHPUnit_Framework_AssertionFailedError $e) {
+<span class="ln">653</span>             $failure = TRUE;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#25			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(776): <strong>PHPUnit_Framework_TestResult</strong>-><strong>run</strong>(Codeception\TestCase\Cept)				</div>
+
+				<div class="code"><pre><span class="ln">771</span>             $this-&gt;prepareTemplate($template);
+<span class="ln">772</span> 
+<span class="ln">773</span>             $php = PHPUnit_Util_PHP::factory();
+<span class="ln">774</span>             $php-&gt;runJob($template-&gt;render(), $this, $result);
+<span class="ln">775</span>         } else {
+<span class="error"><span class="ln error-ln">776</span>             $result-&gt;run($this);
+</span><span class="ln">777</span>         }
+<span class="ln">778</span> 
+<span class="ln">779</span>         if ($this-&gt;useErrorHandler !== NULL) {
+<span class="ln">780</span>             $result-&gt;convertErrorsToExceptions($oldErrorHandlerSetting);
+<span class="ln">781</span>         }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#26			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestSuite.php(775): <strong>PHPUnit_Framework_TestCase</strong>-><strong>run</strong>(PHPUnit_Framework_TestResult)				</div>
+
+				<div class="code"><pre><span class="ln">770</span>      * @param  PHPUnit_Framework_Test        $test
+<span class="ln">771</span>      * @param  PHPUnit_Framework_TestResult  $result
+<span class="ln">772</span>      */
+<span class="ln">773</span>     public function runTest(PHPUnit_Framework_Test $test, PHPUnit_Framework_TestResult $result)
+<span class="ln">774</span>     {
+<span class="error"><span class="ln error-ln">775</span>         $test-&gt;run($result);
+</span><span class="ln">776</span>     }
+<span class="ln">777</span> 
+<span class="ln">778</span>     /**
+<span class="ln">779</span>      * Sets the name of the suite.
+<span class="ln">780</span>      *
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#27			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestSuite.php(745): <strong>PHPUnit_Framework_TestSuite</strong>-><strong>runTest</strong>(Codeception\TestCase\Cept, PHPUnit_Framework_TestResult)				</div>
+
+				<div class="code"><pre><span class="ln">740</span>                           $this-&gt;backupStaticAttributes
+<span class="ln">741</span>                         );
+<span class="ln">742</span>                         $test-&gt;setRunTestInSeparateProcess($processIsolation);
+<span class="ln">743</span>                     }
+<span class="ln">744</span> 
+<span class="error"><span class="ln error-ln">745</span>                     $this-&gt;runTest($test, $result);
+</span><span class="ln">746</span>                 }
+<span class="ln">747</span>             }
+<span class="ln">748</span>         }
+<span class="ln">749</span> 
+<span class="ln">750</span>         if ($doSetup) {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#28			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/PHPUnit/Runner.php(107): <strong>PHPUnit_Framework_TestSuite</strong>-><strong>run</strong>(PHPUnit_Framework_TestResult, false, array(), array(), ...)				</div>
+
+				<div class="code"><pre><span class="ln">102</span>           $result,
+<span class="ln">103</span>           $arguments[&#039;filter&#039;],
+<span class="ln">104</span>           $arguments[&#039;groups&#039;],
+<span class="ln">105</span>           $arguments[&#039;excludeGroups&#039;],
+<span class="ln">106</span>           $arguments[&#039;processIsolation&#039;]
+<span class="error"><span class="ln error-ln">107</span>         );
+</span><span class="ln">108</span> 
+<span class="ln">109</span>         unset($suite);
+<span class="ln">110</span> 
+<span class="ln">111</span>         foreach ($arguments[&#039;listeners&#039;] as $listener) {
+<span class="ln">112</span>                $result-&gt;removeListener($listener);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#29			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php(132): <strong>Codeception\PHPUnit\Runner</strong>-><strong>doEnhancedRun</strong>(PHPUnit_Framework_TestSuite, PHPUnit_Framework_TestResult, array(&quot;config&quot; =&gt; null, &quot;report&quot; =&gt; false, &quot;html&quot; =&gt; false, &quot;xml&quot; =&gt; false, ...))				</div>
+
+				<div class="code"><pre><span class="ln">127</span>     }
+<span class="ln">128</span> 
+<span class="ln">129</span>     public function run(\Codeception\PHPUnit\Runner $runner, \PHPUnit_Framework_TestResult $result, $options) {
+<span class="ln">130</span> 
+<span class="ln">131</span>         $this-&gt;dispatcher-&gt;dispatch(&#039;suite.before&#039;, new Event\Suite($this-&gt;suite, $result, $this-&gt;settings));
+<span class="error"><span class="ln error-ln">132</span>         $runner-&gt;doEnhancedRun($this-&gt;suite, $result, $options);
+</span><span class="ln">133</span>         $this-&gt;dispatcher-&gt;dispatch(&#039;suite.after&#039;, new Event\Suite($this-&gt;suite, $result, $this-&gt;settings));
+<span class="ln">134</span>     }
+<span class="ln">135</span> 
+<span class="ln">136</span>     public function loadTest($path) {
+<span class="ln">137</span>         if (!file_exists($path)) throw new \Exception(&quot;File $path not found&quot;);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#30			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Codecept.php(110): <strong>Codeception\SuiteManager</strong>-><strong>run</strong>(Codeception\PHPUnit\Runner, PHPUnit_Framework_TestResult, array(&quot;config&quot; =&gt; null, &quot;report&quot; =&gt; false, &quot;html&quot; =&gt; false, &quot;xml&quot; =&gt; false, ...))				</div>
+
+				<div class="code"><pre><span class="ln">105</span> 
+<span class="ln">106</span>         if (!$this-&gt;runner-&gt;getPrinter()) {
+<span class="ln">107</span>             $printer = new PHPUnit\ResultPrinter\UI($this-&gt;dispatcher, $this-&gt;options);
+<span class="ln">108</span>             $this-&gt;runner-&gt;setPrinter($printer);
+<span class="ln">109</span>         }
+<span class="error"><span class="ln error-ln">110</span>         $suiteManager-&gt;run($this-&gt;runner, $this-&gt;result, $this-&gt;options);
+</span><span class="ln">111</span> 
+<span class="ln">112</span>         return $this-&gt;result;
+<span class="ln">113</span>     }
+<span class="ln">114</span> 
+<span class="ln">115</span>     public static function versionString() {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#31			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Command/Run.php(79): <strong>Codeception\Codecept</strong>-><strong>runSuite</strong>(&quot;functional&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">74</span>             $codecept-&gt;runSuite($suite, $test);
+<span class="ln">75</span>         }
+<span class="ln">76</span> 
+<span class="ln">77</span>         if (!$test) {
+<span class="ln">78</span>             foreach ($suites as $suite) {
+<span class="error"><span class="ln error-ln">79</span>                 $codecept-&gt;runSuite($suite);
+</span><span class="ln">80</span>             }
+<span class="ln">81</span>         }
+<span class="ln">82</span> 
+<span class="ln">83</span>         $codecept-&gt;printResult();
+<span class="ln">84</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#32			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(240): <strong>Codeception\Command\Run</strong>-><strong>execute</strong>(Symfony\Component\Console\Input\ArgvInput, Symfony\Component\Console\Output\ConsoleOutput)				</div>
+
+				<div class="code"><pre><span class="ln">235</span>         $input-&gt;validate();
+<span class="ln">236</span> 
+<span class="ln">237</span>         if ($this-&gt;code) {
+<span class="ln">238</span>             $statusCode = call_user_func($this-&gt;code, $input, $output);
+<span class="ln">239</span>         } else {
+<span class="error"><span class="ln error-ln">240</span>             $statusCode = $this-&gt;execute($input, $output);
+</span><span class="ln">241</span>         }
+<span class="ln">242</span> 
+<span class="ln">243</span>         return is_numeric($statusCode) ? $statusCode : 0;
+<span class="ln">244</span>     }
+<span class="ln">245</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#33			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(193): <strong>Symfony\Component\Console\Command\Command</strong>-><strong>run</strong>(Symfony\Component\Console\Input\ArgvInput, Symfony\Component\Console\Output\ConsoleOutput)				</div>
+
+				<div class="code"><pre><span class="ln">188</span> 
+<span class="ln">189</span>         // the command name MUST be the first element of the input
+<span class="ln">190</span>         $command = $this-&gt;find($name);
+<span class="ln">191</span> 
+<span class="ln">192</span>         $this-&gt;runningCommand = $command;
+<span class="error"><span class="ln error-ln">193</span>         $statusCode = $command-&gt;run($input, $output);
+</span><span class="ln">194</span>         $this-&gt;runningCommand = null;
+<span class="ln">195</span> 
+<span class="ln">196</span>         return is_numeric($statusCode) ? $statusCode : 0;
+<span class="ln">197</span>     }
+<span class="ln">198</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#34			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(106): <strong>Symfony\Component\Console\Application</strong>-><strong>doRun</strong>(Symfony\Component\Console\Input\ArgvInput, Symfony\Component\Console\Output\ConsoleOutput)				</div>
+
+				<div class="code"><pre><span class="ln">101</span>         if (null === $output) {
+<span class="ln">102</span>             $output = new ConsoleOutput();
+<span class="ln">103</span>         }
+<span class="ln">104</span> 
+<span class="ln">105</span>         try {
+<span class="error"><span class="ln error-ln">106</span>             $statusCode = $this-&gt;doRun($input, $output);
+</span><span class="ln">107</span>         } catch (\Exception $e) {
+<span class="ln">108</span>             if (!$this-&gt;catchExceptions) {
+<span class="ln">109</span>                 throw $e;
+<span class="ln">110</span>             }
+<span class="ln">111</span> 
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#35			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;phar://C:/wamp/www/TuPagoDe2/codecept.phar/codecept(32): <strong>Symfony\Component\Console\Application</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">27</span>  $app-&gt;add(new Codeception\Command\GeneratePhpUnit(&#039;generate:phpunit&#039;)); 
+<span class="ln">28</span>  $app-&gt;add(new Codeception\Command\GenerateTest(&#039;generate:test&#039;));
+<span class="ln">29</span>  $app-&gt;add(new Codeception\Command\GeneratePhpUnit(&#039;generate:phpunit&#039;));
+<span class="ln">30</span>  $app-&gt;add(new Codeception\Command\GenerateSuite(&#039;generate:suite&#039;));
+<span class="ln">31</span>  $app-&gt;add(new Codeception\Command\GenerateScenarios(&#039;generate:scenarios&#039;));
+<span class="error"><span class="ln error-ln">32</span>  $app-&gt;run();
+</span></pre></div>			</td>
+		</tr>
+						<tr class="trace app collapsed">
+			<td class="number">
+				#36			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;C:\wamp\www\TuPagoDe2\codecept.phar(7): <strong>require_once</strong>(&quot;phar://C:/wamp/www/TuPagoDe2/codecept.phar/codecept&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">02</span> &lt;?php
+<span class="ln">03</span> Phar::mapPhar();
+<span class="ln">04</span> 
+<span class="ln">05</span> require_once &#039;phar://codecept.phar/autoload.php&#039;;
+<span class="ln">06</span> 
+<span class="error"><span class="ln error-ln">07</span> require_once &#039;phar://codecept.phar/codecept&#039;;
+</span><span class="ln">08</span> 
+<span class="ln">09</span> __HALT_COMPILER(); ?&gt;
+<span class="ln">10</span> <span class="ln">11</span> <span class="ln">12</span> </pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2013-06-03 21:28:50 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.13	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\s)trace-file(\\s|$)");
+var collapsedReg = new RegExp("(^|\\s)collapsed(\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+<!-- start log messages -->
+<table class="yiiLog" width="100%" cellpadding="2" style="border-spacing:1px;font:11px Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;color:#666666;">
+	<tr>
+		<th style="background:black;color:white;" colspan="5">
+			Application Log
+		</th>
+	</tr>
+	<tr style="background-color: #ccc;">
+	    <th style="width:120px">Timestamp</th>
+		<th>Level</th>
+		<th>Category</th>
+		<th>Message</th>
+	</tr>
+	<tr style="background:#FFFFFF">
+		<td align="center">21:28:32.978667</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;log&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Module/Yii1.php
+(112)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
+(53)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
+(44)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:32.980959</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;request&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Module/Yii1.php
+(112)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
+(53)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php
+(44)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.099781</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;log&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.100295</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;request&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.100486</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;urlManager&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.106355</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;themeManager&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.111758</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;widgetFactory&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (1)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.115184</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;user&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.117100</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;session&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.120501</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;coreMessages&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (62)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.122706</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;clientScript&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.172981</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;log&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(108)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.173445</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;request&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(108)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.173579</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;urlManager&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(108)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.193521</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;db&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (162)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.194561</td>
+		<td>trace</td>
+		<td>system.db.CDbConnection</td>
+		<td><pre>Opening DB connection
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (162)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:33.203058</td>
+		<td>trace</td>
+		<td>system.db.CDbCommand</td>
+		<td><pre>Querying SQL: SHOW FULL COLUMNS FROM `puntoconexion`
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (162)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:33.207237</td>
+		<td>trace</td>
+		<td>system.db.CDbCommand</td>
+		<td><pre>Querying SQL: SHOW CREATE TABLE `puntoconexion`
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (162)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:43.788917</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;themeManager&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:43.790601</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;widgetFactory&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (1)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:43.791776</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;user&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:43.792066</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;session&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:43.793941</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;coreMessages&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (62)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:43.794291</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;clientScript&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:43.804409</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;log&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:43.805253</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;request&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:43.805501</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;urlManager&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.865777</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;themeManager&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.867377</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;widgetFactory&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (1)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.868550</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;user&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.868819</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;session&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.870675</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;coreMessages&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (62)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.871036</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;clientScript&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (188)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.887501</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;log&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.888355</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;request&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.888607</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;urlManager&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(50)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.889126</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;themeManager&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.890513</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;widgetFactory&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (1)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.891612</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;user&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.891880</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;session&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (41)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.893971</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;coreMessages&quot; application component
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\main.php (62)
+in C:\wamp\www\TuPagoDe2\themes\mattskitchen\views\layouts\column1.php (5)
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.894313</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;clientScript&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php (31)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.931391</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;log&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(108)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.931854</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;request&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(82)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(108)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.931992</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;urlManager&quot; application component
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php
+(84)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php
+(264)
+in
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php
+(108)</pre></td>
+	</tr>	<tr style="background:#FFC0CB">
+		<td align="center">21:28:50.932604</td>
+		<td>error</td>
+		<td>php</td>
+		<td><pre>Undefined index: _transient
+(C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php:226)
+Stack trace:
+#0 C:\wamp\www\TuPagoDe2\protected\controllers\SiteController.php(176):
+Puntoconexion-&gt;createCon()
+#1 C:\yii\framework\web\actions\CInlineAction.php(49):
+SiteController-&gt;actionValidate()
+#2 C:\yii\framework\web\CController.php(308):
+CInlineAction-&gt;runWithParams()
+#3 C:\yii\framework\web\CController.php(286): SiteController-&gt;runAction()
+#4 C:\yii\framework\web\CController.php(265):
+SiteController-&gt;runActionWithFilters()
+#5 C:\yii\framework\web\CWebApplication.php(282): SiteController-&gt;run()
+#6 C:\yii\framework\web\CWebApplication.php(141):
+CWebApplication-&gt;runController()
+#7 C:\yii\framework\base\CApplication.php(169):
+CWebApplication-&gt;processRequest()
+#8
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Connector/Yii1.php(84):
+CWebApplication-&gt;run()
+#9
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php(264):
+Codeception\Util\Connector\Yii1-&gt;doRequest()
+#10
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php(108):
+Codeception\Util\Connector\Yii1-&gt;request()
+#11
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Util/Framework.php(72):
+Codeception\Module\Yii1-&gt;submitFormWithButton()
+#12 unknown(0): Codeception\Module\Yii1-&gt;click()
+#13
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Step.php(126):
+call_user_func_array()
+#14
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/TestCase.php(28):
+Codeception\Step\Action-&gt;run()
+#15
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Scenario.php(102):
+Codeception\TestCase\Cept-&gt;runStep()
+#16 C:\wamp\www\TuPagoDe2\tests\functional\TestGuy.php(115):
+Codeception\Scenario-&gt;runStep()
+#17 C:\wamp\www\TuPagoDe2\tests\functional\ChooseBankCept.php(13):
+TestGuy-&gt;click()
+#18
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/TestCase/Cept.php(72):
+require()
+#19 unknown(0): Codeception\TestCase\Cept-&gt;testCodecept()
+#20
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(976):
+ReflectionMethod-&gt;invokeArgs()
+#21
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(831):
+Codeception\TestCase\Cept-&gt;runTest()
+#22
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestResult.php(648):
+Codeception\TestCase\Cept-&gt;runBare()
+#23
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestCase.php(776):
+PHPUnit_Framework_TestResult-&gt;run()
+#24
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestSuite.php(775):
+Codeception\TestCase\Cept-&gt;run()
+#25
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/phpunit/phpunit/PHPUnit/Framework/TestSuite.php(745):
+PHPUnit_Framework_TestSuite-&gt;runTest()
+#26
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/PHPUnit/Runner.php(107):
+PHPUnit_Framework_TestSuite-&gt;run()
+#27
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/SuiteManager.php(132):
+Codeception\PHPUnit\Runner-&gt;doEnhancedRun()
+#28
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Codecept.php(110):
+Codeception\SuiteManager-&gt;run()
+#29
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/src/Codeception/Command/Run.php(79):
+Codeception\Codecept-&gt;runSuite()
+#30
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(240):
+Codeception\Command\Run-&gt;execute()
+#31
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(193):
+Codeception\Command\Run-&gt;run()
+#32
+phar://C:/wamp/www/TuPagoDe2/codecept.phar/vendor/symfony/console/Symfony/Component/Console/Application.php(106):
+Symfony\Component\Console\Application-&gt;doRun()
+#33 phar://C:/wamp/www/TuPagoDe2/codecept.phar/codecept(32):
+Symfony\Component\Console\Application-&gt;run()
+#34 C:\wamp\www\TuPagoDe2\codecept.phar(7): require_once()
+REQUEST_URI=/TupagoDe2/index.phpr=site/validate
+in C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php
+(226)
+in C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php
+(7295)
+in C:\wamp\www\TuPagoDe2\protected\models\Puntoconexion.php (166)</pre></td>
+	</tr>	<tr style="background:#FFFFFF">
+		<td align="center">21:28:50.932965</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;errorHandler&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php
+(226)
+in C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php
+(7295)
+in C:\wamp\www\TuPagoDe2\protected\models\Puntoconexion.php (166)</pre></td>
+	</tr>	<tr style="background:#F5F5F5">
+		<td align="center">21:28:50.934370</td>
+		<td>trace</td>
+		<td>system.CModule</td>
+		<td><pre>Loading &quot;themeManager&quot; application component
+in C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php
+(226)
+in C:\wamp\www\TuPagoDe2\protected\extensions\GWebService\nusoap\nusoap.php
+(7295)
+in C:\wamp\www\TuPagoDe2\protected\models\Puntoconexion.php (166)</pre></td>
+	</tr></table>
+<!-- end of log messages -->

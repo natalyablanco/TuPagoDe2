@@ -9,6 +9,6 @@ $I->fillField('form[card_expiry]','1016');
 $I->fillField('form[card_security]','12345');
 $I->fillField('form[user_id]','12584345');
 $I->selectOption('form[card_type]', 'Master Card');
+$I->selectOption('form[card_bank]', 'Provincial');
 $I->click('Validar');
-$I->amOnPage('index.php?r=site/validate');
-$I->see('Numero de Tarjeta Errado');
+$I->see('Numero de Tarjeta Errado - Prefijo no concuerda con tipo de tarjeta');

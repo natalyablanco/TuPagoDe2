@@ -109,7 +109,7 @@ class Transaction extends CActiveRecord
 		));
 	}
 
-	public function saveTransaction($merchant_usn,$amount,$nit,$trans_status,$message,$payment_type,$orderid,$punto) {
+	public function createTransaction($merchant_usn,$amount,$nit,$trans_status,$message,$payment_type,$orderid,$punto) {
 
 		$model = new Transaction();
 		$model->merchant_usn = $merchant_usn;
@@ -126,7 +126,18 @@ class Transaction extends CActiveRecord
 			return false;
 		}else{
 
-			return $model->save();
+			return $model->saveTransaction();
+		}
+
+	}
+
+	public function saveTransaction() {
+		
+		if($this->hasErrors()){
+			return false;
+		}else{
+
+			return $this->save();
 		}
 
 	}
@@ -167,7 +178,8 @@ class Transaction extends CActiveRecord
 
 	public function using($punto){
 		$model = new Transaction();
-		$model->punto = $punto;
+		$model->punto = $punto->nombrePunto;
 	}
+
 
 }

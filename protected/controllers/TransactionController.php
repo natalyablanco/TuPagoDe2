@@ -158,44 +158,6 @@ class TransactionController extends Controller
 		return $model;
 	}
 
-
-	  public function createTransaction()
-    {
-    	
-    	/*$client = new nusoap_client("https://esitef-homologacao.softwareexpress.com.br/e-sitef/Payment2?wsdl",true);
-    	$transactionRequest = array('transactionRequest' => array
-														(
-															'amount' => '1012',
-															'merchantId' => 'TESTSTORE',
-															'merchantUSN' => '19949576',
-															'orderId' => '19949576'
-														));
-		$payment = $client->getProxy();
-		try{
-			$transactionResponse = $payment->beginTransaction($transactionRequest);
-		}catch(Exception $e){
-			echo "holaaa222";
-			echo $e->getmessage();
-		}
-			
-		$nit = $transactionResponse['transactionResponse']['nit'];
-		$paymentRequest = array('paymentRequest' => array
-													(
-													'authorizerId' => '1',
-													'autoConfirmation' => 'true',
-													'cardExpiryDate' => '1016',
-													'cardNumber' => '4563470000000000004',
-													'cardSecurityCode' => '12345',
-													'customerId' => 'TEST',
-													'extraField' => 'bonus',
-													'installmentType' => '3',
-													'installments' => '1',
-													'nit' => $nit
-												));
-		$result = $payment->doPayment($paymentRequest);*/
-		return "hola";
-    }
-
 	/**
 	 * Performs the AJAX validation.
 	 * @param Transaction $model the model to be validated
